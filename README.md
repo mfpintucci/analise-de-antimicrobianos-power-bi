@@ -23,61 +23,29 @@ Mais do que a construção de um dashboard, este projeto demonstra a implementa�
 
 # ▶️ Como visualizar o projeto
 
-> **Importante:** arquivos `.pbix` e `.pbit` não são executados ou visualizados diretamente na interface do GitHub.
+> **Importante:** arquivos `.pbix` não são visualizados diretamente na interface do GitHub.
 
-O GitHub armazena esses arquivos no repositório, mas para utilizar a versão interativa é necessário baixar o arquivo e abri-lo no **Microsoft Power BI Desktop**.
-
-### 🖥️ Dashboard interativo
+## 🖥️ Dashboard interativo
 
 Para explorar filtros, segmentações, KPIs e gráficos:
 
-1. Faça o download do arquivo:
-
-**`Panorama_Antimicrobianos.pbix`**
-
-2. Abra o arquivo utilizando o **Microsoft Power BI Desktop**.
+1. faça o download do arquivo `Panorama_Antimicrobianos.pbix`;
+2. abra o arquivo utilizando o **Microsoft Power BI Desktop**.
 
 📥 **[Baixar arquivo PBIX](./Panorama_Antimicrobianos.pbix)**
 
+> O arquivo `.pbix` contém os dados sintéticos já importados e pode ser explorado normalmente no Power BI Desktop.  
+> A atualização da fonte de dados depende da disponibilidade dos arquivos utilizados no projeto.
+
 ---
 
-### 📄 Visualização sem Power BI
+## 📄 Visualização em PDF
 
-Caso você não possua o Power BI Desktop instalado, também está disponível uma versão em PDF com as páginas do relatório.
+Para quem não possui o Power BI Desktop instalado, também está disponível uma versão em PDF com as páginas do relatório.
 
 📄 **[Visualizar relatório em PDF](./Panorama_Antimicrobianos.pdf)**
 
-> A versão PDF permite visualizar o resultado final do projeto, mas não possui os recursos interativos disponíveis no arquivo `.pbix`.
-
----
-
-### 🧩 Template reutilizável
-
-Também está disponível uma versão `.pbit`, contendo a estrutura reutilizável do projeto.
-
-📥 **[Baixar template PBIT](./Panorama_Antimicrobianos_Template.pbit)**
-
-O template mantém a estrutura do modelo, transformações, medidas e visualizações, permitindo reutilizar a solução com outras bases compatíveis.
-
----
-
-# 🖼️ Preview do Dashboard
-
-## Página 01 — Capa
-
-![Capa do Dashboard](images/capa.png)
-
----
-
-## Página 02 — Evolução Mensal
-
-![Evolução Mensal do Consumo](images/evolucao-mensal.png)
-
----
-
-## Página 03 — Ranking de Consumo
-
-![Ranking de Consumo](images/ranking.png)
+> A versão PDF permite visualizar o resultado final do projeto, mas não possui os recursos interativos disponíveis no Power BI.
 
 ---
 
@@ -102,7 +70,7 @@ Além da evolução temporal, o dashboard permite:
 
 # 🧪 Dados Demonstrativos
 
-Todos os dados disponibilizados neste repositório são **inteiramente sintéticos**.
+Todos os dados utilizados na versão pública deste projeto são **inteiramente sintéticos**.
 
 Eles foram gerados exclusivamente para demonstrar a arquitetura do projeto e o funcionamento do fluxo de transformação e análise.
 
@@ -118,7 +86,7 @@ Os dados não correspondem a:
 
 Os nomes dos medicamentos são utilizados apenas para contextualização da análise.
 
-Todos os identificadores, pacientes, profissionais, quantidades e movimentações presentes nos arquivos demonstrativos foram criados exclusivamente para fins de portfólio.
+Todos os identificadores, pacientes, profissionais, quantidades e movimentações utilizados na versão demonstrativa foram criados exclusivamente para fins de portfólio.
 
 ---
 
@@ -159,25 +127,23 @@ Essa organização permite incorporar novos arquivos mensais sem necessidade de 
 
 # 🗂️ Fonte dos Dados
 
-Os dados são organizados mensalmente em arquivos `.CSV`.
+Os dados são organizados originalmente em arquivos `.CSV` mensais com estrutura padronizada.
 
-Exemplo:
+Exemplo conceitual:
 
 ```text
-dados_exemplo/
-├── 2026_01_JANEIRO.csv
-├── 2026_02_FEVEREIRO.csv
-├── 2026_03_MARCO.csv
-├── 2026_04_ABRIL.csv
-├── 2026_05_MAIO.csv
-├── 2026_06_JUNHO.csv
-├── 2026_07_JULHO.csv
-└── 2026_08_AGOSTO.csv
+2026_01_JANEIRO.csv
+2026_02_FEVEREIRO.csv
+2026_03_MARCO.csv
+2026_04_ABRIL.csv
+...
 ```
 
 O Power BI utiliza o conector de **Pasta**, permitindo a ingestão e combinação automática dos arquivos compatíveis existentes no diretório.
 
 A inclusão de um novo período exige apenas um novo arquivo respeitando o schema esperado.
+
+> Os arquivos de origem não são disponibilizados neste repositório.
 
 ---
 
@@ -617,25 +583,8 @@ Essa abordagem também permitiu reutilizar a estrutura como base para novas aná
 analise-de-antimicrobianos-power-bi/
 │
 ├── README.md
-│
 ├── Panorama_Antimicrobianos.pbix
-├── Panorama_Antimicrobianos_Template.pbit
-├── Panorama_Antimicrobianos.pdf
-│
-├── images/
-│   ├── capa.png
-│   ├── evolucao-mensal.png
-│   └── ranking.png
-│
-└── dados_exemplo/
-    ├── 2026_01_JANEIRO.csv
-    ├── 2026_02_FEVEREIRO.csv
-    ├── 2026_03_MARCO.csv
-    ├── 2026_04_ABRIL.csv
-    ├── 2026_05_MAIO.csv
-    ├── 2026_06_JUNHO.csv
-    ├── 2026_07_JULHO.csv
-    └── 2026_08_AGOSTO.csv
+└── Panorama_Antimicrobianos.pdf
 ```
 
 ---
@@ -757,7 +706,7 @@ Não são disponibilizados:
 - arquivos originais;
 - informações que permitam identificar a instituição relacionada à demanda inicial.
 
-Quaisquer identificadores eventualmente presentes nos arquivos demonstrativos são inteiramente sintéticos.
+Quaisquer identificadores eventualmente presentes na versão demonstrativa são inteiramente sintéticos.
 
 ---
 
@@ -777,7 +726,7 @@ Este projeto é disponibilizado exclusivamente para fins de **portfólio e demon
 
 Não é autorizada a reprodução, redistribuição, comercialização ou utilização integral deste projeto sem autorização prévia da autora.
 
-Os dados disponibilizados neste repositório são inteiramente sintéticos e foram criados exclusivamente para fins demonstrativos.
+Os dados utilizados na versão pública são inteiramente sintéticos e foram criados exclusivamente para fins demonstrativos.
 
 Este repositório **não possui licença open source**.
 
